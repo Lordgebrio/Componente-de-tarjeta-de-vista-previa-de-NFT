@@ -30,22 +30,43 @@ section {
 }
 
 .card {
-  max-width: 400px;
-  height: auto;
   background-color: var(--fondo-secundario);
   border-radius: 20px;
+  width: 350px;
+  height: auto;
 }
 
 .card-image {
   width: 100%;
   height: 100%;
   padding: 30px 30px 0 30px;
+  display: inline-block;
 }
 
-.card-image img {
+.card-image:hover .image-hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.principal {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
+  /* display: none; */
+}
+
+.image-hover {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  border-radius: 5px;
+  background-color: var(--cian);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 255, 255, 0.5);
 }
 
 .card-info {
@@ -57,6 +78,12 @@ section {
   font-weight: 500;
   margin: 15px 0;
   color: var(--blanco);
+}
+
+.card-title:hover {
+  color: var(--cian);
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
 .card-description {
@@ -78,41 +105,47 @@ section {
   align-items: center;
 }
 
-.card-price-value{
-    margin-left: 10px;
-    font-weight: 600;
+.card-price-value {
+  margin-left: 10px;
+  font-weight: 600;
 }
 
-.time{
-    font-size: 18px;
-    color: var(--azul-suave);
-    margin-left: 10px;
+.time {
+  font-size: 18px;
+  color: var(--azul-suave);
+  margin-left: 10px;
 }
 
-hr{
-    margin: 20px 0;
-    border: 1px solid var(--linea);
+hr {
+  margin: 20px 0;
+  border: 1px solid var(--linea);
 }
 
-.card-owner{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding-bottom: 30px;
+.card-owner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
 }
 
-.card-owner img{
-    width: 50px;
-    border: 1px solid var(--blanco);
-    border-radius: 30px;
+.card-owner img {
+  width: 50px;
+  border: 1px solid var(--blanco);
+  border-radius: 30px;
 }
 
-.card-owner p{
-    font-size: 18px;
-    margin-left: 20px;
-    color: var(--blanco);
+.card-owner p {
+  font-size: 18px;
+  margin-left: 20px;
+  color: var(--blanco);
 }
 
 .card-owner span {
-    color: var(--azul-suave);
+  color: var(--azul-suave);
+}
+
+.card-owner p:hover {
+  color: var(--cian);
+  cursor: pointer;
+  transition: all 0.5s;
 }
